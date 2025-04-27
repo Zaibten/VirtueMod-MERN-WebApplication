@@ -77,6 +77,9 @@ If a file `VirtueMod/language/default.json` exists,
 
 ---
 
+# 📸 Some Screenshots of the Project 🖼️✨
+
+
 # 🎉 Thank You for Supporting Virtue Mod!
 
 Feel free to ⭐ star the repo if you love it and join our community for future updates!
