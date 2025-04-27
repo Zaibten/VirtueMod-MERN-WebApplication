@@ -78,6 +78,8 @@ If a file `VirtueMod/language/default.json` exists,
 ---
 
 # 📸 Some Screenshots of the Project 🖼️✨
+![image](https://github.com/user-attachments/assets/2313e750-6c8d-436e-80ec-8aef7d06e37a)
+![image](https://github.com/user-attachments/assets/a51c294e-a671-47a4-b184-0da30a0a881e)
 
 
 # 🎉 Thank You for Supporting Virtue Mod!
