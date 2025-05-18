@@ -836,7 +836,7 @@ form.sign-in-form {
 
 
 </>
-);
+)
 };
 
 export default Register;
