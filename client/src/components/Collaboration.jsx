@@ -10,7 +10,7 @@ const Collaboration = () => {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seamless collaboration
+            Work Smarter Together with AI Collaboration
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -27,12 +27,12 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Try it now</Button>
+          {/* <Button>Start Collaborating</Button> */}
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
+            {collabText || "Join forces with your team using real-time AI support to streamline ideas, tasks, and decisions like never before."}
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
@@ -43,7 +43,7 @@ const Collaboration = () => {
                     src={brainwaveSymbol}
                     width={48}
                     height={48}
-                    alt="brainwave"
+                    alt="Virtua Mod"
                   />
                 </div>
               </div>
@@ -53,14 +53,10 @@ const Collaboration = () => {
               {collabApps.map((app, index) => (
                 <li
                   key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
-                    index * 45
-                  }`}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45}`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                      index * 45
-                    }`}
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45}`}
                   >
                     <img
                       className="m-auto"

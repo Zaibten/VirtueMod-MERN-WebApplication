@@ -16,8 +16,8 @@ const Services = () => {
     <Section id="how-to-use">
       <div className="container">
         <Heading
-          title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          title="Empowering Creativity with AI"
+          text="Explore how our generative AI tools transform ideas into professional-grade content—from images to videos to smart interactions."
         />
 
         <div className="relative">
@@ -26,16 +26,16 @@ const Services = () => {
               <img
                 className="w-full h-full object-cover md:object-right"
                 width={800}
-                alt="Smartest AI"
                 height={730}
                 src={service1}
+                alt="AI Intelligence Interface"
               />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
+              <h4 className="h4 mb-4">Smart AI Interface</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
+                Seamlessly integrate AI into your creative process—no technical expertise needed.
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
@@ -43,7 +43,7 @@ const Services = () => {
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
                   >
-                    <img width={24} height={24} src={check} />
+                    <img width={24} height={24} src={check} alt="Feature checkmark" />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
@@ -61,15 +61,14 @@ const Services = () => {
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
-                  alt="robot"
+                  alt="AI Photo Enhancement"
                 />
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Photo editing</h4>
+                <h4 className="h4 mb-4">One-Click Photo Enhancer</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically enhance your photos using our AI app&apos;s
-                  photo editing feature. Try it now!
+                  Instantly enhance image quality, adjust lighting, and remove noise using smart photo AI.
                 </p>
               </div>
 
@@ -78,10 +77,9 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">AI-Powered Video Maker</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  Bring your stories to life with vivid visuals and realistic motion powered by AI.
                 </p>
 
                 <ul className="flex items-center justify-between">
@@ -101,7 +99,7 @@ const Services = () => {
                             : ""
                         }
                       >
-                        <img src={item} width={24} height={24} alt={item} />
+                        <img src={item} width={24} height={24} alt="Feature icon" />
                       </div>
                     </li>
                   ))}
@@ -114,7 +112,7 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   width={520}
                   height={400}
-                  alt="Scary robot"
+                  alt="Generative AI in Action"
                 />
 
                 <VideoChatMessage />

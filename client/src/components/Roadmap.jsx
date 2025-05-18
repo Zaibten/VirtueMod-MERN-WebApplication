@@ -9,11 +9,11 @@ import { Gradient } from "./design/Roadmap";
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
     <div className="container md:pb-10">
-      <Heading tag="Ready to get started" title="What we’re working on" />
+      <Heading tag="Ready to create your model image?" title="What Virtua Mod is working on" />
 
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
-          const status = item.status === "done" ? "Done" : "In progress";
+          const status = item.status === "done" ? "Completed" : "In progress";
 
           return (
             <div
@@ -29,7 +29,7 @@ const Roadmap = () => (
                     src={grid}
                     width={550}
                     height={550}
-                    alt="Grid"
+                    alt="Virtua Mod grid background"
                   />
                 </div>
                 <div className="relative z-1">
@@ -54,7 +54,7 @@ const Roadmap = () => (
                       src={item.imageUrl}
                       width={628}
                       height={426}
-                      alt={item.title}
+                      alt={`Virtua Mod: ${item.title}`}
                     />
                   </div>
                   <h4 className="h4 mb-4">{item.title}</h4>
@@ -68,9 +68,9 @@ const Roadmap = () => (
         <Gradient />
       </div>
 
-      <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our roadmap</Button>
-      </div>
+      {/* <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
+        <Button href="/roadmap">Explore Virtua Mod roadmap</Button>
+      </div> */}
     </div>
   </Section>
 );

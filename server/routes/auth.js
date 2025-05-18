@@ -1,38 +1,49 @@
-const router = require("express").Router();
-const { User } = require("../models/user");
+const express = require("express");
+const router = express.Router();
 const bcrypt = require("bcrypt");
-const Joi = require("joi");
+const jwt = require("jsonwebtoken");
+const User = require("../models/User");
 
-router.post("/", async (req, res) => {
-	try {
-		const { error } = validate(req.body);
-		if (error)
-			return res.status(400).send({ message: error.details[0].message });
+const SALT = parseInt(process.env.SALT);
+const JWT_SECRET = process.env.JWT_SECRET;
 
-		const user = await User.findOne({ email: req.body.email });
-		if (!user)
-			return res.status(401).send({ message: "Invalid Email or Password" });
+// Register
+router.post("/register", async (req, res) => {
+  const { username, email, password } = req.body;
 
-		const validPassword = await bcrypt.compare(
-			req.body.password,
-			user.password
-		);
-		if (!validPassword)
-			return res.status(401).send({ message: "Invalid Email or Password" });
+  try {
+    const existing = await User.findOne({ email });
+    if (existing) return res.status(400).json({ msg: "Email already exists" });
 
-		const token = user.generateAuthToken();
-		res.status(200).send({ data: token, message: "logged in successfully" });
-	} catch (error) {
-		res.status(500).send({ message: "Internal Server Error" });
-	}
+    const hashed = await bcrypt.hash(password, SALT);
+    const user = new User({ username, email, password: hashed });
+    await user.save();
+
+    const token = jwt.sign({ id: user._id, username, email }, JWT_SECRET);
+    res.json({ token, username, email });
+
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
 });
 
-const validate = (data) => {
-	const schema = Joi.object({
-		email: Joi.string().email().required().label("Email"),
-		password: Joi.string().required().label("Password"),
-	});
-	return schema.validate(data);
-};
+// Login
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).json({ msg: "User not found" });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) return res.status(400).json({ msg: "Invalid credentials" });
+
+    const token = jwt.sign({ id: user._id, username: user.username, email }, JWT_SECRET);
+    res.json({ token, username: user.username, email });
+
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
+});
 
 module.exports = router;

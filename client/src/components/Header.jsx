@@ -6,11 +6,27 @@ import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { FaUserCircle } from "react-icons/fa"; // install this if needed
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
+  
+
+  // Check login status
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
+    const uname = localStorage.getItem("username");
+
+    if (token && email && uname) {
+      setIsLoggedIn(true);
+      setUsername(uname);
+    }
+  }, []);
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -29,6 +45,14 @@ const Header = () => {
     setOpenNavigation(false);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    localStorage.removeItem("username");
+    setIsLoggedIn(false);
+    window.location.reload(); // or redirect to login page
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
@@ -36,8 +60,30 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+        {/* Logo */}
+        <a
+          className="block w-[12rem] xl:mr-8"
+          href="#hero"
+          style={{
+            paddingTop: '2px',
+            paddingBottom: '2px',
+            borderRadius: '9999px',
+            overflow: 'hidden',
+            display: 'inline-block',
+            height: '100px',
+          }}
+        >
+          <img
+            src={brainwave}
+            alt="Brainwave"
+            style={{
+              height: '100%',
+              width: 'auto',
+              borderRadius: '9999px',
+              objectFit: 'contain',
+              display: 'block',
+            }}
+          />
         </a>
 
         <nav
@@ -67,15 +113,27 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
-        </Button>
+        {/* Auth Buttons */}
+        {isLoggedIn ? (
+          <div className="hidden lg:flex items-center gap-4">
+            <FaUserCircle className="text-white text-2xl" />
+            <span className="text-white font-semibold">{username}</span>
+<Button
+  className="ml-2"
+  onClick={() => {
+    if (window.confirm("Are you sure you want to logout?")) {
+      handleLogout();
+    }
+  }}
+>
+              Logout
+            </Button>
+          </div>
+        ) : (
+          <Button className="hidden lg:flex" href="/register">
+            Sign in
+          </Button>
+        )}
 
         <Button
           className="ml-auto lg:hidden"

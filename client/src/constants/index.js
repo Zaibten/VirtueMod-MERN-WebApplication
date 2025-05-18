@@ -34,18 +34,25 @@ import {
   telegram,
   twitter,
   yourlogo,
+  brandone,
+  brandtwo,
+  brandthree,
+  brandfour,
+  brandfive,
+  brandsix,
+  brandseven,
 } from "../assets";
 
 export const navigation = [
   {
     id: "0",
+    title: "Home",
+    url: "/",
+  },
+    {
+    id: "1",
     title: "Features",
     url: "#features",
-  },
-  {
-    id: "1",
-    title: "Pricing",
-    url: "#pricing",
   },
   {
     id: "2",
@@ -54,19 +61,23 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "3D Model",
+    url: "#3dmodel",
   },
-  {
+    {
     id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
+    title: "Team",
+    url: "#team",
+  },
+    {
+    id: "5",
+    title: "Contact",
+    url: "#contact",
   },
   {
-    id: "5",
+    id: "6",
     title: "Sign in",
-    url: "#login",
+    url: "/register",
     onlyMobile: true,
   },
 ];
@@ -75,13 +86,14 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [yourlogo, brandone, brandtwo, brandthree, brandfour,brandfive,brandsix,brandseven];
 
 export const brainwaveServices = [
   "Photo generating",
   "Photo enhance",
   "Seamless Integration",
 ];
+
 
 export const brainwaveServicesIcons = [
   recording03,
@@ -94,57 +106,58 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-    date: "May 2023",
+    title: "AI Model Image Generation",
+    text: "Develop advanced AI algorithms to generate realistic images of male and female models from user prompts or uploaded photos.",
+    date: "May 2025",
     status: "done",
     imageUrl: roadmap1,
     colorful: true,
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2023",
+    title: "Enhanced Image Customization",
+    text: "Add options for users to customize generated models’ poses, outfits, and backgrounds to personalize their creations.",
+    date: "March 2025",
     status: "progress",
     imageUrl: roadmap2,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "May 2023",
+    title: "Real-time Photo Enhancement",
+    text: "Integrate photo enhancement features that improve user images and generated content with smart filters and adjustments.",
+    date: "April 2025",
     status: "done",
     imageUrl: roadmap3,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "May 2023",
+    title: "Seamless Platform Integration",
+    text: "Enable easy integration with popular social media and design platforms for effortless sharing and exporting of generated images.",
+    date: "May 2025",
     status: "progress",
     imageUrl: roadmap4,
   },
 ];
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "Empower your team with intuitive AI tools, real-time collaboration, and enterprise-grade security.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
+    title: "Effortless Collaboration",
     text: collabText,
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "AI-Powered Productivity",
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Secure & Reliable by Design",
   },
 ];
+
 
 export const collabApps = [
   {
@@ -244,16 +257,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Instant Insights",
+    text: "Virtua Mod delivers answers in real-time so you can move from question to clarity instantly.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Smarter Every Day",
+    text: "Powered by continual learning, Virtua Mod improves with every interaction to serve you better.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,16 +274,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Universal Access",
+    text: "Use Virtua Mod on any device, from any location—your assistant is always within reach.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Blazing Speed",
+    text: "Optimized for performance, Virtua Mod responds faster than traditional AI systems.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -278,22 +291,21 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Human-Like Interaction",
+    text: "Enjoy a seamless, natural language experience that feels more like a conversation than a query.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Seamless Integrations",
+    text: "Connect Virtua Mod to your tools and platforms to streamline your workflow effortlessly.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
   },
 ];
-
 export const socials = [
   {
     id: "0",

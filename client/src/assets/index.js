@@ -1,4 +1,4 @@
-import brainwave from "./brainwave.svg";
+import brainwave from "./logo.png";
 import check from "./check.svg";
 import brainwaveSymbol from "./brainwave-symbol.svg";
 import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
@@ -8,7 +8,14 @@ import smallSphere from "./4-small.png";
 import grid from "./grid.png";
 import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
-import yourlogo from "./yourlogo.svg";
+import yourlogo from "./brandlogo1.png";
+import brandone from "./brandlogo2.png";
+import brandtwo from "./brandlogo3.png";
+import brandthree from "./brandlogo4.png";
+import brandfour from "./brandlogo5.png";
+import brandfive from "./brandlogo6.png";
+import brandsix from "./brandlogo7.png";
+import brandseven from "./brandlogo8.png";
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -87,6 +94,13 @@ export {
   smallSphere,
   grid,
   yourlogo,
+  brandone,
+  brandtwo,
+  brandthree,
+  brandfour,
+  brandfive,
+  brandsix,
+  brandseven,
   homeSmile,
   file02,
   searchMd,
