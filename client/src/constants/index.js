@@ -74,6 +74,12 @@ export const navigation = [
     title: "Contact",
     url: "#contact",
   },
+  {
+    id: "6",
+    title: "Sign in",
+    url: "/register",
+    onlyMobile: true,
+  },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
