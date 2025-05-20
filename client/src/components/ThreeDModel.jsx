@@ -25,7 +25,7 @@ const ThreeDModel = () => {
       <div style={styles.iframeContainer}>
         <iframe
           title="3D Model Viewer"
-          src="https://www.google.com/"
+          src="https://7fdf5c4f36b85d1ea1.gradio.live/"
           allow="autoplay; fullscreen; vr"
           allowFullScreen
           style={{
