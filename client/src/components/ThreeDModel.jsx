@@ -20,18 +20,36 @@ const ThreeDModel = () => {
 
   return (
     <div style={{ backgroundColor: "#121212", minHeight: "100vh", padding: 20, fontFamily: "'Inter', sans-serif" }}id="3dmodel">
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: headingFontSize,
-          marginBottom: 20,
-          fontWeight: "800",
-          letterSpacing: "0.05em",
-          color: "#eee",
-        }}
-      >
-        Generate Virtue Mod Model
-      </h1>
+
+
+<h1
+  style={{
+    textAlign: "center",
+    fontWeight: "800",
+    letterSpacing: "0.05em",
+    color: "#eee",
+    marginBottom: "2rem",
+    fontSize: "3rem",
+    lineHeight: 1.2, // default line height for desktop
+  }}
+  className="responsive-heading"
+>
+  Generate Virtue Mod Model
+</h1>
+
+<style>
+  {`
+    @media (max-width: 600px) {
+      .responsive-heading {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.4 !important; /* more spacing between wrapped lines */
+      }
+    }
+  `}
+</style>
+
+
 
       <div
         style={{

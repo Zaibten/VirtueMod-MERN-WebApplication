@@ -14,7 +14,7 @@ const ScrollToTopButton = () => {
   const buttonStyle = {
     position: "fixed",
     bottom: "7.5rem",
-    right: "1.7rem",
+    right: "1rem",
     width: "3.5rem",
     height: "3.5rem",
     borderRadius: "50%",

@@ -38,7 +38,7 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/markspencer",
   },
   {
-    name: "Alex Johnson",
+    name: "Rohail Tariq",
     role: "Mentor",
     photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppkoKsaYMuIoNLDH7O8ePOacLPG1mKXtEng&s",
     linkedin: "https://linkedin.com/in/alexjohnson",
