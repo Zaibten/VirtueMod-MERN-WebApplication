@@ -61,7 +61,7 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "3D Model",
+    title: "Image Generation",
     url: "#3dmodel",
   },
     {

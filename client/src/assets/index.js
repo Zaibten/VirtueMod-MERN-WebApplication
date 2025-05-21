@@ -27,6 +27,11 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
+import taha from "./1.png";
+import shayan from "./2.png";
+import team3 from "./3.png";
+import team4 from "./4.png";
+import team5 from "./5.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -158,4 +163,9 @@ export {
   instagram,
   telegram,
   twitter,
+  taha,
+  shayan,
+  team3,
+  team4,
+  team5,
 };

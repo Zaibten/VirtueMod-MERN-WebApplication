@@ -1,40 +1,46 @@
 import React from "react";
+import {   taha,
+  shayan,
+  team3,
+  team4,
+  team5, } from "../assets";
+
 
 const teamMembers = [
   {
     name: "Taha Bin Arshad",
     role: "Project Manager",
-    photo: "https://randomuser.me/api/portraits/men/32.jpg",
+    photo: taha,
     linkedin: "https://linkedin.com/in/taha",
   },
   {
     name: "Shayan Ahmed",
     role: "Lead Developer",
-    photo: "https://randomuser.me/api/portraits/men/45.jpg",
+    photo: shayan,
     linkedin: "https://linkedin.com/in/shayanahmed1",
   },
   {
     name: "Adnan Ali",
     role: "Backend Engineer",
-    photo: "https://randomuser.me/api/portraits/men/46.jpg",
+    photo: team3,
     linkedin: "https://linkedin.com/in/shayanahmed2",
-  },
-  {
-    name: "Muhammad Ahmed",
-    role: "QA Engineer",
-    photo: "https://randomuser.me/api/portraits/men/38.jpg",
-    linkedin: "https://linkedin.com/in/markspencer",
   },
   {
     name: "Muneera Ahmed",
     role: "UI/UX Designer",
-    photo: "https://randomuser.me/api/portraits/women/30.jpg",
+    photo: team4,
     linkedin: "https://linkedin.com/in/ninapatel",
+  },
+    {
+    name: "Muhammad Ahmed",
+    role: "QA Engineer",
+    photo: team5,
+    linkedin: "https://linkedin.com/in/markspencer",
   },
   {
     name: "Alex Johnson",
-    role: "Frontend Developer",
-    photo: "https://randomuser.me/api/portraits/men/40.jpg",
+    role: "Mentor",
+    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppkoKsaYMuIoNLDH7O8ePOacLPG1mKXtEng&s",
     linkedin: "https://linkedin.com/in/alexjohnson",
   },
 ];
