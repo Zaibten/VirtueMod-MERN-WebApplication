@@ -58,30 +58,17 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         {/* Logo */}
-        <a
-          className="block w-[12rem] xl:mr-8"
-          href="#hero"
-          style={{
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            borderRadius: "9999px",
-            overflow: "hidden",
-            display: "inline-block",
-            height: "100px",
-          }}
-        >
-          <img
-            src={brainwave}
-            alt="Brainwave"
-            style={{
-              height: "100%",
-              width: "auto",
-              borderRadius: "9999px",
-              objectFit: "contain",
-              display: "block",
-            }}
-          />
-        </a>
+  {/* Logo */}
+<a
+  className="block w-[8rem] h-[40px] lg:w-[12rem] lg:h-[100px] xl:mr-8"
+  href="#hero"
+>
+  <img
+    src={brainwave}
+    alt="Brainwave"
+    className="h-full w-auto object-contain rounded-full"
+  />
+</a>
 
     
 
@@ -128,23 +115,39 @@ const Header = () => {
 </nav>
 
 {/* Username or Sign-in Button outside nav */}
-<div className="flex items-center gap-3 lg:hidden ml-auto">
+{/* Username / Sign In + Logout Button (visible on all screen sizes) */}
+<div className="flex items-center gap-3 ml-auto">
   {isLoggedIn ? (
-    <div className="flex items-center text-white gap-2">
-      <FaUserCircle className="text-2xl" />
-      <span className="text-sm font-semibold">{username}</span>
+    <div className="flex items-center gap-3">
+      <div className="flex items-center text-white gap-2">
+        <FaUserCircle className="text-2xl" />
+        <span className="text-sm font-semibold">{username}</span>
+      </div>
+      <Button
+        className="hidden lg:inline-block text-sm"
+        onClick={() => {
+          if (window.confirm("Are you sure you want to logout?")) {
+            handleLogout();
+          }
+        }}
+      >
+        Logout
+      </Button>
     </div>
   ) : (
-    <Button className="text-sm" href="/register">
-      Sign in
-    </Button>
+    <>
+      <Button className="text-sm hidden lg:inline-block" href="/register">
+        Sign in
+      </Button>
+    </>
   )}
 
-  {/* Mobile Menu Toggle Button */}
-  <Button className="ml-2" px="px-3" onClick={toggleNavigation}>
+  {/* Mobile Menu Toggle Button (hamburger) */}
+  <Button className="lg:hidden ml-2" px="px-3" onClick={toggleNavigation}>
     <MenuSvg openNavigation={openNavigation} />
   </Button>
 </div>
+
 
       </div>
     </div>
