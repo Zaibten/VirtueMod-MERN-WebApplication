@@ -3,7 +3,9 @@ import {   taha,
   shayan,
   team3,
   team4,
-  team5, } from "../assets";
+  team5,
+team6
+ } from "../assets";
 
 
 const teamMembers = [
@@ -26,7 +28,7 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/shayanahmed2",
   },
   {
-    name: "Muneera Ahmed",
+    name: "Muneera Rehman",
     role: "UI/UX Designer",
     photo: team4,
     linkedin: "https://linkedin.com/in/ninapatel",
@@ -40,7 +42,7 @@ const teamMembers = [
   {
     name: "Rohail Tariq",
     role: "Mentor",
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppkoKsaYMuIoNLDH7O8ePOacLPG1mKXtEng&s",
+    photo: team6,
     linkedin: "https://linkedin.com/in/alexjohnson",
   },
 ];
@@ -48,7 +50,7 @@ const teamMembers = [
 const Team = () => {
   return (
     <div style={styles.page} id="team">
-      <h1 style={styles.heading}>Meet Our Team</h1>
+<h1 className="team-heading">Meet Our Team</h1>
       <div style={styles.grid}>
         {teamMembers.map(({ name, role, photo, linkedin }) => (
           <div key={name} className="team-card">
@@ -89,6 +91,29 @@ const Team = () => {
           user-select: none;
           will-change: transform;
         }
+        .team-heading {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #eee;
+}
+
+/* Responsive font size for tablets */
+@media (max-width: 768px) {
+  .team-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Responsive font size for phones */
+@media (max-width: 480px) {
+  .team-heading {
+    font-size: 2rem;
+  }
+}
+
 
         .team-card:hover {
           transform: translateY(-12px) scale(1.07);
