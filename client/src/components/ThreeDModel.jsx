@@ -63,7 +63,7 @@ const ThreeDModel = () => {
       >
         <iframe
           title="3D Model Viewer"
-          src="https://135e074ffbec975fb4.gradio.live/"
+          src="https://53494feba673368fe5.gradio.live/"
           // src={iframeSrc}
           allow="autoplay; fullscreen; vr"
           allowFullScreen
