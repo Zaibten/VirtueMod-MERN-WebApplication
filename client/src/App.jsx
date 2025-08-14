@@ -13,6 +13,7 @@ import ThreeDModel from "./components/ThreeDModel";
 import Team from "./components/Team";
 import Contact from "./components/contact";
 import Footer from "./components/Footer";
+import Blog from "./components/blog";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
         <ThreeDModel />
         <Roadmap />
         <Team />
+        <Blog />
         <Contact />
         <Footer />
       </div>
@@ -37,17 +39,17 @@ const Home = () => {
 };
 
 const App = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//code.tidio.co/0cod26pfb62euct6ob89ysu1c5j2u5jf.js";
-    script.async = true;
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "//code.tidio.co/0cod26pfb62euct6ob89ysu1c5j2u5jf.js";
+  //   script.async = true;
+  //   document.body.appendChild(script);
 
-    return () => {
-      // Optional: cleanup script if component unmounts
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     // Optional: cleanup script if component unmounts
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <Routes>
