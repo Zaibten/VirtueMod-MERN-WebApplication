@@ -15,35 +15,11 @@ const teamMembers = [
     photo: taha,
     linkedin: "https://linkedin.com/in/taha",
   },
-  {
-    name: "Shayan Ahmed",
-    role: "Lead Developer",
-    photo: shayan,
-    linkedin: "https://linkedin.com/in/shayanahmed1",
-  },
-  {
-    name: "Adnan Ali",
-    role: "Backend Engineer",
-    photo: team3,
-    linkedin: "https://linkedin.com/in/shayanahmed2",
-  },
-  {
-    name: "Muneera Rehman",
-    role: "UI/UX Designer",
-    photo: team4,
-    linkedin: "https://linkedin.com/in/ninapatel",
-  },
     {
     name: "Muhammad Ahmed",
-    role: "QA Engineer",
+    role: "Lead Developer",
     photo: team5,
     linkedin: "https://linkedin.com/in/markspencer",
-  },
-  {
-    name: "Rohail Tariq",
-    role: "Mentor",
-    photo: team6,
-    linkedin: "https://linkedin.com/in/alexjohnson",
   },
 ];
 
