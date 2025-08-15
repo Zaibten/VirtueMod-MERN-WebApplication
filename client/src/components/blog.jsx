@@ -10,7 +10,7 @@ const blogPosts = [
       "Artificial Intelligence is transforming business strategies, increasing efficiency, and driving innovation across industries...",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNf5Gr8jK3C4bKVRqhTx790EsPpPM6mqaBOczQq_zx43ufQV7VGJPJo-P5kRUfvU_Z0E&usqp=CAU",
-    link: "https://www.forbes.com/sites/forbestechcouncil/2023/05/10/how-ai-is-transforming-business/",
+    link: "https://www.artificial-intelligence.blog/",
   },
   {
     title: "Next.js: Building Modern Web Applications",
@@ -21,7 +21,7 @@ const blogPosts = [
       "Learn how Next.js simplifies building fast, scalable, and SEO-friendly web applications using React framework...",
     photo:
       "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?crop=entropy&cs=tinysrgb&fit=max&h=600&w=800",
-    link: "https://nextjs.org/learn/basics/create-nextjs-app",
+    link: "https://careerfoundry.com/en/blog/web-development/",
   },
   {
     title: "Backend Engineering Best Practices",
@@ -32,7 +32,7 @@ const blogPosts = [
       "Understand the key principles of backend engineering, including API design, database management, and server architecture...",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9qlyZAguSX-8mj8fdT98nD9_DMifxMy75Q&s",
-    link: "https://www.smashingmagazine.com/2023/03/backend-development-best-practices/",
+    link: "https://www.geeksforgeeks.org/blogs/backend-development/",
   },
   {
     title: "UI/UX Design Trends in 2025",
@@ -43,7 +43,7 @@ const blogPosts = [
       "Stay ahead with the latest UI/UX design trends to create visually stunning and user-friendly digital experiences...",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU_E6YgWc95x9yJwE3ScaXCbgrjac1Q-6New&s",
-    link: "https://uxdesign.cc/ux-trends-2025-2f8f6bcbf5e3",
+    link: "https://www.learnui.design/blog/",
   },
   {
     title: "QA Automation: Ensuring Product Quality",
