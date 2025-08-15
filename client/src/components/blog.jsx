@@ -54,7 +54,7 @@ const blogPosts = [
       "Explore how QA automation can streamline testing processes, improve product quality, and accelerate release cycles...",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQtnHeQwr_SZHnD0L2daOsC43-S67uLhPRBw&s",
-    link: "https://www.softwaretestinghelp.com/automation-testing-tutorial/",
+    link: "https://sqagroup.com/blog/",
   },
   {
     title: "Mentorship & Career Growth in Tech",
@@ -65,7 +65,7 @@ const blogPosts = [
       "Mentorship plays a vital role in professional growth, providing guidance, support, and opportunities in technology careers...",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOt8yVPy6GGZ4tjCXHpImPPqpNoEwJGeE2Q&s",
-    link: "https://www.coursera.org/articles/mentorship-in-tech",
+    link: "https://technology.online.city.ac.uk/blogs/topic/computer-science/",
   },
 ];
 
